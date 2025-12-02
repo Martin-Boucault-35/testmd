@@ -233,12 +233,45 @@ h1 {
 
 #### SQL
 
+Exemple de requête avec jointure :
+
 ```sql
 SELECT users.name, orders.total
 FROM users
 INNER JOIN orders ON users.id = orders.user_id
 WHERE orders.total > 100
 ORDER BY orders.total DESC;
+```
+
+Exemple de création de table et insertion :
+
+```sql
+-- Création d'une table
+CREATE TABLE products (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    price DECIMAL(10, 2),
+    stock INT DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Insertion de données
+INSERT INTO products (name, price, stock) 
+VALUES 
+    ('Laptop', 999.99, 10),
+    ('Mouse', 29.99, 50),
+    ('Keyboard', 79.99, 30);
+
+-- Requête avec agrégation
+SELECT 
+    category,
+    COUNT(*) as total_products,
+    AVG(price) as avg_price,
+    SUM(stock) as total_stock
+FROM products
+GROUP BY category
+HAVING AVG(price) > 50
+ORDER BY total_products DESC;
 ```
 
 #### Bash/Shell
@@ -873,15 +906,21 @@ Les notes peuvent contenir plusieurs paragraphes[^note-longue].
 
 Vous pouvez mentionner des utilisateurs avec @username (sera cliquable sur GitHub).
 
+**Exemple:** Merci à @Martin-Boucault-35 pour ce guide complet !
+
 ### Références d'Issues et PR
 
 Références : #1, #2, #123 (si les issues existent dans le repo)
+
+**Exemple:** Cette fonctionnalité a été ajoutée suite à #2
 
 Références externes : Martin-Boucault-35/autre-repo#123
 
 ### Commits
 
 Référence à un commit : `a1b2c3d` (le SHA sera automatiquement lié)
+
+**Exemple:** La vidéo d'exemple a été ajoutée dans le commit 927cb4b0dfb53205a3907cb48244408f00da5513
 
 ---
 
@@ -943,7 +982,11 @@ GitHub peut afficher des modèles 3D au format STL directement dans le navigateu
 
 > **Note:** Pour afficher un modèle 3D, ajoutez un fichier `.stl` dans votre repository. GitHub le rendra automatiquement avec un visualiseur 3D interactif.
 
-**Exemple:** Si vous avez un fichier `model.stl`, référencez-le simplement :
+**Exemple de modèle 3D intégré dans ce repository :**
+
+![3D Model](./model.stl)
+
+Vous pouvez aussi référencer des modèles dans le dossier assets :
 ```markdown
 ![3D Model](./assets/model.stl)
 ```
@@ -1080,6 +1123,8 @@ Créez des barres de progression avec HTML :
 
 ### Couleurs de Fond et Styles
 
+Vous pouvez utiliser des couleurs de fond avec HTML pour créer des éléments visuellement distincts :
+
 <table>
 <tr>
 <td bgcolor="#FF6B6B" width="100" height="50" align="center">
@@ -1093,6 +1138,64 @@ Créez des barres de progression avec HTML :
 </td>
 <td bgcolor="#96CEB4" width="100" height="50" align="center">
   <b style="color:white">Vert</b>
+</td>
+<td bgcolor="#FFD93D" width="100" height="50" align="center">
+  <b style="color:black">Jaune</b>
+</td>
+</tr>
+<tr>
+<td bgcolor="#A8E6CF" width="100" height="50" align="center">
+  <b style="color:black">Vert pâle</b>
+</td>
+<td bgcolor="#FFA07A" width="100" height="50" align="center">
+  <b style="color:white">Saumon</b>
+</td>
+<td bgcolor="#9B59B6" width="100" height="50" align="center">
+  <b style="color:white">Violet</b>
+</td>
+<td bgcolor="#E91E63" width="100" height="50" align="center">
+  <b style="color:white">Rose</b>
+</td>
+<td bgcolor="#34495E" width="100" height="50" align="center">
+  <b style="color:white">Gris foncé</b>
+</td>
+</tr>
+</table>
+
+#### Encadrés avec Couleurs de Fond
+
+<table>
+<tr>
+<td bgcolor="#E8F5E9" width="100%">
+  <b>✅ Succès</b><br>
+  Opération réussie avec succès !
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td bgcolor="#FFF3E0" width="100%">
+  <b>⚠️ Attention</b><br>
+  Veuillez vérifier vos paramètres avant de continuer.
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td bgcolor="#FFEBEE" width="100%">
+  <b>❌ Erreur</b><br>
+  Une erreur s'est produite lors du traitement.
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td bgcolor="#E3F2FD" width="100%">
+  <b>ℹ️ Information</b><br>
+  Cette fonctionnalité nécessite une version récente.
 </td>
 </tr>
 </table>
