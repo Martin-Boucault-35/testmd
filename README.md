@@ -233,12 +233,46 @@ h1 {
 
 #### SQL
 
+Exemple de requête avec jointure :
+
 ```sql
 SELECT users.name, orders.total
 FROM users
 INNER JOIN orders ON users.id = orders.user_id
 WHERE orders.total > 100
 ORDER BY orders.total DESC;
+```
+
+Exemple de création de table et insertion :
+
+```sql
+-- Création d'une table
+CREATE TABLE products (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    category VARCHAR(50),
+    price DECIMAL(10, 2),
+    stock INT DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Insertion de données
+INSERT INTO products (name, category, price, stock) 
+VALUES 
+    ('Laptop', 'Electronics', 999.99, 10),
+    ('Mouse', 'Electronics', 29.99, 50),
+    ('Keyboard', 'Electronics', 79.99, 30);
+
+-- Requête avec agrégation
+SELECT 
+    category,
+    COUNT(*) as total_products,
+    AVG(price) as avg_price,
+    SUM(stock) as total_stock
+FROM products
+GROUP BY category
+HAVING AVG(price) > 50
+ORDER BY total_products DESC;
 ```
 
 #### Bash/Shell
@@ -873,15 +907,21 @@ Les notes peuvent contenir plusieurs paragraphes[^note-longue].
 
 Vous pouvez mentionner des utilisateurs avec @username (sera cliquable sur GitHub).
 
+**Exemple:** Merci à @Martin-Boucault-35 pour ce guide complet !
+
 ### Références d'Issues et PR
 
 Références : #1, #2, #123 (si les issues existent dans le repo)
+
+**Exemple:** Cette fonctionnalité a été ajoutée suite à #2
 
 Références externes : Martin-Boucault-35/autre-repo#123
 
 ### Commits
 
 Référence à un commit : `a1b2c3d` (le SHA sera automatiquement lié)
+
+**Exemple:** La vidéo d'exemple a été ajoutée dans le commit 927cb4b0dfb53205a3907cb48244408f00da5513
 
 ---
 
@@ -943,7 +983,11 @@ GitHub peut afficher des modèles 3D au format STL directement dans le navigateu
 
 > **Note:** Pour afficher un modèle 3D, ajoutez un fichier `.stl` dans votre repository. GitHub le rendra automatiquement avec un visualiseur 3D interactif.
 
-**Exemple:** Si vous avez un fichier `model.stl`, référencez-le simplement :
+**Exemple de modèle 3D intégré dans ce repository :**
+
+![3D Model](./model.stl)
+
+Vous pouvez aussi référencer des modèles dans le dossier assets :
 ```markdown
 ![3D Model](./assets/model.stl)
 ```
@@ -1068,34 +1112,7 @@ Vous pouvez créer des ancres personnalisées avec HTML :
 
 Puis y faire référence : [Aller à l'ancre personnalisée](#ancre-personnalisee)
 
-### Progress Bars (Barres de Progression)
 
-Créez des barres de progression avec HTML :
-
-<progress value="70" max="100">70%</progress> 70%
-
-<progress value="30" max="100">30%</progress> 30%
-
-<progress value="90" max="100">90%</progress> 90%
-
-### Couleurs de Fond et Styles
-
-<table>
-<tr>
-<td bgcolor="#FF6B6B" width="100" height="50" align="center">
-  <b style="color:white">Rouge</b>
-</td>
-<td bgcolor="#4ECDC4" width="100" height="50" align="center">
-  <b style="color:white">Cyan</b>
-</td>
-<td bgcolor="#45B7D1" width="100" height="50" align="center">
-  <b style="color:white">Bleu</b>
-</td>
-<td bgcolor="#96CEB4" width="100" height="50" align="center">
-  <b style="color:white">Vert</b>
-</td>
-</tr>
-</table>
 
 ---
 
@@ -1115,7 +1132,7 @@ Ce README démontre l'ensemble des fonctionnalités disponibles pour créer des 
 - ✅ **Citations** : Simples et imbriquées
 - ✅ **Emojis** : Codes et Unicode directs
 - ✅ **Badges** : Build status, technologies, sociaux
-- ✅ **Éléments HTML** : Détails/Accordéon, kbd, mark, progress
+- ✅ **Éléments HTML** : Détails/Accordéon, kbd, mark
 - ✅ **Expressions mathématiques** : LaTeX inline et blocs
 - ✅ **Diagrammes Mermaid** : Flowchart, séquence, Gantt, classes, états, ER, pie, git, journey, mindmap
 - ✅ **Diagrammes SVG et DrawIO** : Intégrés et inline
@@ -1127,7 +1144,7 @@ Ce README démontre l'ensemble des fonctionnalités disponibles pour créer des 
 - ✅ **Mentions et références** : Users, issues, PR, commits
 - ✅ **Touches de clavier** : Raccourcis avec kbd
 - ✅ **Formats avancés** : CSV, STL 3D, Jupyter Notebooks
-- ✅ **Astuces** : Centrage, sections réductibles, barres de progression, couleurs
+- ✅ **Astuces** : Centrage, sections réductibles, ancres personnalisées
 
 ---
 
