@@ -1112,94 +1112,7 @@ Vous pouvez créer des ancres personnalisées avec HTML :
 
 Puis y faire référence : [Aller à l'ancre personnalisée](#ancre-personnalisee)
 
-### Progress Bars (Barres de Progression)
 
-Créez des barres de progression avec HTML :
-
-<progress value="70" max="100">70%</progress> 70%
-
-<progress value="30" max="100">30%</progress> 30%
-
-<progress value="90" max="100">90%</progress> 90%
-
-### Couleurs de Fond et Styles
-
-Vous pouvez utiliser des couleurs de fond avec HTML pour créer des éléments visuellement distincts :
-
-<table>
-<tr>
-<td bgcolor="#FF6B6B" width="100" height="50" align="center">
-  <b style="color:white">Rouge</b>
-</td>
-<td bgcolor="#4ECDC4" width="100" height="50" align="center">
-  <b style="color:white">Cyan</b>
-</td>
-<td bgcolor="#45B7D1" width="100" height="50" align="center">
-  <b style="color:white">Bleu</b>
-</td>
-<td bgcolor="#96CEB4" width="100" height="50" align="center">
-  <b style="color:white">Vert</b>
-</td>
-<td bgcolor="#FFD93D" width="100" height="50" align="center">
-  <b style="color:black">Jaune</b>
-</td>
-</tr>
-<tr>
-<td bgcolor="#A8E6CF" width="100" height="50" align="center">
-  <b style="color:black">Vert pâle</b>
-</td>
-<td bgcolor="#FFA07A" width="100" height="50" align="center">
-  <b style="color:white">Saumon</b>
-</td>
-<td bgcolor="#9B59B6" width="100" height="50" align="center">
-  <b style="color:white">Violet</b>
-</td>
-<td bgcolor="#E91E63" width="100" height="50" align="center">
-  <b style="color:white">Rose</b>
-</td>
-<td bgcolor="#34495E" width="100" height="50" align="center">
-  <b style="color:white">Gris foncé</b>
-</td>
-</tr>
-</table>
-
-#### Encadrés avec Couleurs de Fond
-
-<table>
-<tr>
-<td bgcolor="#E8F5E9" width="100%">
-  <b>✅ Succès</b><br>
-  Opération réussie avec succès !
-</td>
-</tr>
-</table>
-
-<table>
-<tr>
-<td bgcolor="#FFF3E0" width="100%">
-  <b>⚠️ Attention</b><br>
-  Veuillez vérifier vos paramètres avant de continuer.
-</td>
-</tr>
-</table>
-
-<table>
-<tr>
-<td bgcolor="#FFEBEE" width="100%">
-  <b>❌ Erreur</b><br>
-  Une erreur s'est produite lors du traitement.
-</td>
-</tr>
-</table>
-
-<table>
-<tr>
-<td bgcolor="#E3F2FD" width="100%">
-  <b>ℹ️ Information</b><br>
-  Cette fonctionnalité nécessite une version récente.
-</td>
-</tr>
-</table>
 
 ---
 
@@ -1219,7 +1132,7 @@ Ce README démontre l'ensemble des fonctionnalités disponibles pour créer des 
 - ✅ **Citations** : Simples et imbriquées
 - ✅ **Emojis** : Codes et Unicode directs
 - ✅ **Badges** : Build status, technologies, sociaux
-- ✅ **Éléments HTML** : Détails/Accordéon, kbd, mark, progress
+- ✅ **Éléments HTML** : Détails/Accordéon, kbd, mark
 - ✅ **Expressions mathématiques** : LaTeX inline et blocs
 - ✅ **Diagrammes Mermaid** : Flowchart, séquence, Gantt, classes, états, ER, pie, git, journey, mindmap
 - ✅ **Diagrammes SVG et DrawIO** : Intégrés et inline
@@ -1231,7 +1144,7 @@ Ce README démontre l'ensemble des fonctionnalités disponibles pour créer des 
 - ✅ **Mentions et références** : Users, issues, PR, commits
 - ✅ **Touches de clavier** : Raccourcis avec kbd
 - ✅ **Formats avancés** : CSV, STL 3D, Jupyter Notebooks
-- ✅ **Astuces** : Centrage, sections réductibles, barres de progression, couleurs
+- ✅ **Astuces** : Centrage, sections réductibles, ancres personnalisées
 
 ---
 
