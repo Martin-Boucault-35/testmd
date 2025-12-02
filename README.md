@@ -250,17 +250,18 @@ Exemple de création de table et insertion :
 CREATE TABLE products (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
+    category VARCHAR(50),
     price DECIMAL(10, 2),
     stock INT DEFAULT 0,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Insertion de données
-INSERT INTO products (name, price, stock) 
+INSERT INTO products (name, category, price, stock) 
 VALUES 
-    ('Laptop', 999.99, 10),
-    ('Mouse', 29.99, 50),
-    ('Keyboard', 79.99, 30);
+    ('Laptop', 'Electronics', 999.99, 10),
+    ('Mouse', 'Electronics', 29.99, 50),
+    ('Keyboard', 'Electronics', 79.99, 30);
 
 -- Requête avec agrégation
 SELECT 
