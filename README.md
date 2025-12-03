@@ -92,7 +92,7 @@ Texte <sub>indice</sub> et texte <sup>exposant</sup>
 <dl>
   <dt>Markdown</dt>
   <dd>Langage de balisage léger</dd>
-  
+
   <dt>GitHub</dt>
   <dd>Plateforme de développement collaboratif</dd>
 </dl>
@@ -151,7 +151,7 @@ GitHub supporte l'affichage de vidéos directement dans les README. Il suffit de
 
 Exemple avec une vidéo hébergée sur GitHub :
 ```markdown
-![Demo Video](https://user-images.githubusercontent.com/XXXXXX/video.mp4)
+![Demo Video](https://github.com/Martin-Boucault-35/testmd/assets/example.mp4)
 ```
 
 ---
@@ -257,14 +257,14 @@ CREATE TABLE products (
 );
 
 -- Insertion de données
-INSERT INTO products (name, category, price, stock) 
-VALUES 
+INSERT INTO products (name, category, price, stock)
+VALUES
     ('Laptop', 'Electronics', 999.99, 10),
     ('Mouse', 'Electronics', 29.99, 50),
     ('Keyboard', 'Electronics', 79.99, 30);
 
 -- Requête avec agrégation
-SELECT 
+SELECT
     category,
     COUNT(*) as total_products,
     AVG(price) as avg_price,
@@ -349,7 +349,7 @@ dependencies:
 > sur plusieurs lignes.
 
 > ### Citation avec titre
-> 
+>
 > Ceci est une citation avec un titre et du **texte formaté**.
 >
 > - Liste dans une citation
@@ -474,25 +474,6 @@ Autre exemple : $x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$
 \sum_{i=1}^{n} i = \frac{n(n+1)}{2}
 ```
 
-### Formules Complexes
-
-$$
-\begin{bmatrix}
-a & b \\
-c & d
-\end{bmatrix}
-\times
-\begin{bmatrix}
-e & f \\
-g & h
-\end{bmatrix}
-=
-\begin{bmatrix}
-ae + bg & af + bh \\
-ce + dg & cf + dh
-\end{bmatrix}
-$$
-
 ---
 
 ## 📐 Diagrammes Mermaid
@@ -515,7 +496,7 @@ sequenceDiagram
     participant Client
     participant Serveur
     participant BDD
-    
+
     Client->>Serveur: Requête HTTP
     Serveur->>BDD: Query SQL
     BDD-->>Serveur: Résultat
@@ -580,7 +561,7 @@ erDiagram
     UTILISATEUR ||--o{ COMMANDE : passe
     COMMANDE ||--|{ LIGNE_COMMANDE : contient
     PRODUIT ||--o{ LIGNE_COMMANDE : "est dans"
-    
+
     UTILISATEUR {
         int id PK
         string nom
@@ -851,9 +832,9 @@ Les notes peuvent contenir plusieurs paragraphes[^note-longue].
 [^2]: Ceci est la deuxième note de bas de page.
 
 [^note-longue]: Ceci est une note plus longue.
-    
+
     Elle peut contenir plusieurs paragraphes.
-    
+
     Et même du **texte formaté** !
 
 ---
@@ -906,7 +887,7 @@ Les notes peuvent contenir plusieurs paragraphes[^note-longue].
 ### Mentions d'Utilisateurs
 
 Vous pouvez mentionner des utilisateurs avec @username (sera cliquable sur GitHub).
-
+*
 **Exemple:** Merci à @Martin-Boucault-35 pour ce guide complet !
 
 ### Références d'Issues et PR
@@ -922,7 +903,7 @@ Références externes : Martin-Boucault-35/autre-repo#123
 Référence à un commit : `a1b2c3d` (le SHA sera automatiquement lié)
 
 **Exemple:** La vidéo d'exemple a été ajoutée dans le commit 927cb4b0dfb53205a3907cb48244408f00da5513
-
+*
 ---
 
 ## ⌨️ Touches de Clavier et Raccourcis
